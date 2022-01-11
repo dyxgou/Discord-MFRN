@@ -1,19 +1,21 @@
 import styles from "../styles/Auth.module.css"
 import useInput from "../utils/useInput"
 import DCImage from "../assets/DcBacground.jpg"
-import useLogin from "../utils/useLogin"
+import useRegister from "../utils/useRegister"
 
-const Login = () =>
+const Register = () =>
 {
   const email = useInput({ type : "email" , placeholder : "Escribe tu email" })
   const password = useInput({ type:"password" , placeholder:"Escribe tu contraseña" })
-  const isCompleted = email.value && password.value
+  const name = useInput({ placeholder : "Escribe tu nombre de usuario" })
+  const isCompleted = email.value && password.value  && name.value
 
-  const handleLogin = async(e) =>
+  const handleRegister = async(e) =>
   {
     e.preventDefault()
 
-    const userData = await useLogin({ email : email.value , password : password.value })
+    const userData = await useRegister({ email : email.value , password : password.value , name : name.value })
+    console.log(userData);
   }
 
   return(
@@ -27,7 +29,7 @@ const Login = () =>
 
 
         <form className={styles.auth__form} >
-          <h1 className={styles.auth__title} >Login into your account</h1>
+          <h1 className={styles.auth__title} >Create your account</h1>
           <h2 className={styles.auth__title}>Email</h2>
           <section className={styles.auth__inputContainer} >  
             <input {...email} />
@@ -37,12 +39,18 @@ const Login = () =>
           <section className={styles.auth__inputContainer} >
             <input {...password} />
           </section>
+
+          <h2 className={styles.auth__title}>Username</h2>
+          <section className={styles.auth__inputContainer} >
+            <input {...name} />
+          </section>
+
           <button 
             className={styles.auth__submitButton} 
             type="submit"
             disabled={!isCompleted}
-            onClick={handleLogin}
-          > Login </button>
+            onClick={handleRegister}
+          > Register </button>
         </form>
         
       </main>
@@ -51,4 +59,4 @@ const Login = () =>
 }
 
 
-export default Login
+export default Register
