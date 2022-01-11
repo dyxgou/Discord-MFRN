@@ -1,0 +1,16 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root
+{
+  --blackOne : #36393f;
+  --blackTwo : #303339;
+  --blueOne : #7289da;
+  --whiteOne : #ffffff ;
+  --shadowOne : rgba(0, 0, 0, 0.555) 4px 0px 6px 3px;
+}
