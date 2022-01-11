@@ -1,6 +1,7 @@
 import { join } from 'path';
 import AutoLoad, {AutoloadPluginOptions} from 'fastify-autoload';
 import { FastifyPluginAsync } from 'fastify';
+import fastifyCors from 'fastify-cors';
 
 export type AppOptions = {
   // Place your custom options for app below here.
@@ -28,6 +29,8 @@ const app: FastifyPluginAsync<AppOptions> = async (
     dir: join(__dirname, 'routes'),
     options: opts
   })
+
+  fastify.register(fastifyCors)
 
 };
 

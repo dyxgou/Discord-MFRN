@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+
 *
 {
   margin: 0;
@@ -11,6 +14,9 @@
   --blackOne : #36393f;
   --blackTwo : #303339;
   --blueOne : #7289da;
+  --blueTwo : #435ec2;
   --whiteOne : #ffffff ;
   --shadowOne : rgba(0, 0, 0, 0.555) 4px 0px 6px 3px;
+  --shadowTwo : rgba(0, 0, 0, 0.561) 5px 5px 8px 3px inset;
+  --fontOne :  'Quicksand', sans-serif;
 }

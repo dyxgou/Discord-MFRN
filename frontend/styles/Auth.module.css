@@ -5,30 +5,93 @@
   display: grid;
   place-content: center;
   background-color: var(--blackTwo);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.auth__card
+{
+  border-radius: 40px;  
+  background-color: rgba(42, 42, 42, 0.151);
+  backdrop-filter: blur(20px);
+  width: 80vw;
+  border: 3px solid var(--blueOne);
+  height: 80vh;
+  display: flex;  
+  flex-direction: column;
+  padding: 40px;
+  justify-content: center;
 }
 
 .auth__title
 {
   color: white;
+  font-family: var(--fontOne);
+  font-weight: 400;
+  margin: 10px;
+  transition: .5s;
 }
 
-.auth__card
+
+.auth__inputContainer
 {
-  border-radius: 25px;  
-  background-color: var(--blackOne);
-  box-shadow: var(--shadowOne);
-  width: 80vw;
-  height: 80vh;
-  display: flex;  
+  background-color: var(--blackTwo);
+  display: flex;
+  padding: 15px;
+  margin: 30px;
+  width: 50%;
   justify-content: center;
-  flex-direction: column;
+  border-radius: 30px;  
+  transition: .5s;
+  border: 3px solid transparent;
+  box-shadow: var(--shadowTwo);
+}
+
+.auth__inputContainer > input
+{
+  flex: 1;
+  color: var(--whiteOne);
+  font-family: var(--fontOne);
+  font-weight: 600;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 
+.auth__inputContainer:active
+{
+  border: 3px solid var(--blueOne);
+}
 
-.auth__inputsContainer
+.auth__form
 {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.auth__submitButton
+{
+  background-color: var(--blueTwo);
+  font-family: var(--fontOne);
+  font-size: 18px;
+  color: white;
+  font-weight: 600;
+  width: 30vw;
+  border: none;
+  outline: none;
+  padding: 15px;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  transition: .5s;
+  cursor: pointer;
+}
+
+.auth__submitButton:disabled
+{
+  background-color: var(--blackOne);
 }
